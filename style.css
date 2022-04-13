@@ -1,20 +1,57 @@
 body {
     font-family: 'Roboto', sans-serif;
+    background-color: #F3F3F3;
 }
 
-.header {
+.hud {
+    background-color: #FFFFFF;
     width: 100%;
     height: 80px;
-    font-size: 45px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    left: 0;
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.header {
+    top: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    font-size: 45px;
     padding: 0 22px;
-    box-sizing: border-box;
 }
 
 .header img {
     width: 75px;
     height: 53px;
+}
+
+.input-msg {
+    bottom: 0;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.05);
+    font-size: 26px;
+}
+
+.input-msg ion-icon {
+    padding: 18px;
+}
+
+.input-msg input {
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    color: black;
+    border: none;
+    padding-left: 18px;
+}
+
+.input-msg input:focus {
+    outline: none;
+}
+
+::placeholder {
+    color: black;
+    opacity: 1;
+    font-style: italic;
 }

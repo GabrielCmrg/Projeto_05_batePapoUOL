@@ -24,41 +24,13 @@
 
     <!-- message box -->
     <div class="msg-box">
-        <div class="msg status">
-            <span class="time-stamp">(09:21:45)</span>
-            <span class="sender">João</span>
-            <span class="system">entra na sala...</span>
-        </div>
-        <div class="msg public">
-            <span class="time-stamp">(09:22:28)</span>
-            <span class="sender">João</span>
-            <span class="system">para</span>
-            <span class="receiver">Todos</span>:
-            <span class="content">Bom dia</span>
-        </div>
-        <div class="msg public">
-            <span class="time-stamp">(09:22:38)</span>
-            <span class="sender">Maria</span>
-            <span class="system">para</span>
-            <span class="receiver">João</span>:
-            <span class="content">Oi João :)</span>
-        </div>
-        <div class="msg private">
-            <span class="time-stamp">(09:22:48)</span>
-            <span class="sender">João</span>
-            <span class="system">reservadamente para</span>
-            <span class="receiver">Maria</span>:
-            <span class="content">Oi gatinha quer tc?</span>
-        </div>
-        <div class="msg status">
-            <span class="time-stamp">(09:22:58)</span>
-            <span class="sender">Maria</span>
-            <span class="system">sai da sala...</span>
-        </div>
     </div>
 
     <!-- Send message box -->
-    <div class="input-msg hud"><input type="text" placeholder="Escreva aqui..."><ion-icon name="paper-plane-outline"></ion-icon></div>
+    <div class="input-msg hud">
+        <input type="text" placeholder="Escreva aqui...">
+        <ion-icon name="paper-plane-outline" onclick="sendMessage()"></ion-icon>
+    </div>
 
     <!-- Ion icons -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

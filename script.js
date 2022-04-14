@@ -5,6 +5,7 @@ function login(person) {
 }
 
 function startLoadingMessages() {
+    loadMessages();
     user.messagesID = setInterval(loadMessages, 3000);
     user.loginID = setInterval(pingLogin, 4000);
 }
@@ -90,10 +91,21 @@ function pingLogin() {
     axios.post("https://mock-api.driven.com.br/api/v6/uol/status", {name: user.name});
 }
 
+function sendMessage() {
+    const inputBox = document.querySelector(".input-msg input");
+    if (inputBox.value !== "") {
+        const obj = {
+            from: user.name,
+            to: "Todos",
+            text: inputBox.value,
+            type: "message"
+        };
+        const promise = axios.post("https://mock-api.driven.com.br/api/v6/uol/messages", obj);
+        promise.then(function () {inputBox.value = ""});
+    }
+}
+
 const messageBox = document.querySelector(".msg-box");
-
-loadMessages();
-
 let user = {name: prompt("Qual seu nome?"), messagesID: 1, loginID: 2};
 
 login(user);

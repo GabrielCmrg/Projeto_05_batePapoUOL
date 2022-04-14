@@ -101,7 +101,14 @@ function sendMessage() {
             type: "message"
         };
         const promise = axios.post("https://mock-api.driven.com.br/api/v6/uol/messages", obj);
-        promise.then(function () {inputBox.value = ""});
+        promise
+        .then(function () {
+            inputBox.value = "";
+        })
+        .catch(function () {
+            inputBox.value = "";
+            window.location.reload();
+        });
     }
 }
 

@@ -37,18 +37,18 @@
     </div>
 
     <!-- side menu -->
-    <div class="overlay hidden">
+    <div class="overlay">
         <div class="side" onclick="showHideSideMenu()"></div>
         <div class="menu">
             <h3>Escolha um contato<br>para enviar mensagem:</h3>
             <ul class="contacts">
-                <li>
+                <li onclick="select(this)">
                     <div class="name">
                         <ion-icon name="people"></ion-icon>Todos
                     </div>
-                    <ion-icon name="checkmark-outline" class="checkmark hidden"></ion-icon></ion-icon>
+                    <ion-icon name="checkmark-outline" class="checkmark"></ion-icon></ion-icon>
                 </li>
-                <li>
+                <li onclick="select(this)">
                     <div class="name">
                         <ion-icon name="person-circle"></ion-icon>Augustinho
                     </div>
@@ -57,13 +57,13 @@
             </ul>
             <h3>Escolha a visibilidade:</h3>
             <ul class="visibilities">
-                <li>
+                <li onclick="select(this)">
                     <div class="type">
                         <ion-icon name="lock-open"></ion-icon>Público
                     </div>
-                    <ion-icon name="checkmark-outline" class="checkmark hidden"></ion-icon></ion-icon>
+                    <ion-icon name="checkmark-outline" class="checkmark"></ion-icon></ion-icon>
                 </li>
-                <li>
+                <li onclick="select(this)">
                     <div class="type">
                         <ion-icon name="lock-closed"></ion-icon>Reservadamente
                     </div>

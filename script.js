@@ -114,7 +114,31 @@ function showHideSideMenu() {
     document.querySelector(".overlay").classList.toggle("hidden");
 }
 
+function select(element) {
+    if (document.querySelector(".contacts").contains(element)) {
+        if (selectedContact.innerText === element.innerText) {
+            return;
+        }
+
+        selectedContact.querySelector(".checkmark").classList.add("hidden");
+        element.querySelector(".checkmark").classList.remove("hidden");
+        selectedContact = element;
+
+        return;
+    }
+
+    if (selectedVisibility.innerText === element.innerText) {
+        return;
+    }
+
+    selectedVisibility.querySelector(".checkmark").classList.add("hidden");
+    element.querySelector(".checkmark").classList.remove("hidden");
+    selectedVisibility = element;
+}
+
 const messageBox = document.querySelector(".msg-box");
+let selectedContact = document.querySelector(".contacts li");
+let selectedVisibility = document.querySelector(".visibilities li");
 //let user = {name: prompt("Qual seu nome?"), messagesID: 1, loginID: 2};
 
 //login(user);

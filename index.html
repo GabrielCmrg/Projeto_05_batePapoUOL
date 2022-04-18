@@ -20,6 +20,13 @@
     <link rel="shortcut icon" href="favicon-removebg-preview.png" type="png/x-icon">
 </head>
 <body>
+    <!-- Load screen -->
+    <div class="load">
+        <img src="/logo 2.png" alt="UOL logo" height="92" width="130" />
+        <input type="text" placeholder="Digite seu nome">
+        <input type="button" value="Entrar" onclick="login()">
+    </div>
+
     <!-- header -->
     <div class="header hud">
         <img src="/logo 2.png" width="75" height="53" alt="UOL Logo"/>
@@ -32,28 +39,19 @@
 
     <!-- Send message box -->
     <div class="input-msg hud">
-        <input type="text" placeholder="Escreva aqui...">
+        <div class="text">
+            <input type="text" placeholder="Escreva aqui...">
+            <div class="to-who">Enviando para Maria (reservadamente)</div>
+        </div>
         <ion-icon name="paper-plane-outline" onclick="sendMessage()"></ion-icon>
     </div>
 
     <!-- side menu -->
-    <div class="overlay">
+    <div class="overlay hidden">
         <div class="side" onclick="showHideSideMenu()"></div>
         <div class="menu">
             <h3>Escolha um contato<br>para enviar mensagem:</h3>
             <ul class="contacts">
-                <li onclick="select(this)">
-                    <div class="name">
-                        <ion-icon name="people"></ion-icon>Todos
-                    </div>
-                    <ion-icon name="checkmark-outline" class="checkmark"></ion-icon></ion-icon>
-                </li>
-                <li onclick="select(this)">
-                    <div class="name">
-                        <ion-icon name="person-circle"></ion-icon>Augustinho
-                    </div>
-                    <ion-icon name="checkmark-outline" class="checkmark hidden"></ion-icon></ion-icon>
-                </li>
             </ul>
             <h3>Escolha a visibilidade:</h3>
             <ul class="visibilities">

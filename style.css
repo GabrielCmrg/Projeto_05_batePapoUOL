@@ -64,11 +64,11 @@ body {
 .input-msg {
     bottom: 0;
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.05);
-    font-size: 26px;
 }
 
 .input-msg ion-icon {
     padding: 18px;
+    font-size: 26px;
 }
 
 .input-msg input {
@@ -78,13 +78,21 @@ body {
     color: black;
     border: none;
     padding-left: 18px;
+    vertical-align: middle;
+}
+
+.to-who {
+    padding: 5px 17px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #AAAAAA;
 }
 
 .input-msg input:focus {
     outline: none;
 }
 
-::placeholder {
+.input-msg input::placeholder {
     color: black;
     opacity: 1;
     font-style: italic;
@@ -118,6 +126,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-y: scroll;
 }
 
 .menu h3 {
@@ -155,4 +164,39 @@ body {
     color: black;
     padding: 0 7px;
     box-sizing: border-box;
+}
+
+.load {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+
+.load img {
+    margin-top: 72px;
+}
+
+.load input[type="text"] {
+    width: 261px;
+    height: 54px;
+    margin-top: 94px;
+}
+
+.load input[type="text"]::placeholder {
+    color: #AEAEAE;
+    font-size: 18px;
+    text-align: center;
+}
+
+.load input[type="button"] {
+    width: 109px;
+    height: 45px;
+    margin-top: 94px;
 }

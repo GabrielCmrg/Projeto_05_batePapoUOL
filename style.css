@@ -115,10 +115,6 @@ body {
     background-color: rgba(0, 0, 0, 0.60);
 }
 
-.hidden {
-    display: none;
-}
-
 .menu {
     width: 260px;
     height: 100%;
@@ -199,4 +195,8 @@ body {
     width: 109px;
     height: 45px;
     margin-top: 94px;
+}
+
+.hidden {
+    display: none;
 }

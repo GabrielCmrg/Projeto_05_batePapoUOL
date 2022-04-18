@@ -102,17 +102,19 @@ function sendMessage() {
         };
         const promise = axios.post("https://mock-api.driven.com.br/api/v6/uol/messages", obj);
         promise
-        .then(function () {
-            inputBox.value = "";
-        })
-        .catch(function () {
-            inputBox.value = "";
-            window.location.reload();
-        });
+            .then(() => {inputBox.value = "";})
+            .catch(() => {
+                inputBox.value = "";
+                window.location.reload();
+            });
     }
 }
 
-const messageBox = document.querySelector(".msg-box");
-let user = {name: prompt("Qual seu nome?"), messagesID: 1, loginID: 2};
+function showHideSideMenu() {
+    document.querySelector(".overlay").classList.toggle("hidden");
+}
 
-login(user);
+const messageBox = document.querySelector(".msg-box");
+//let user = {name: prompt("Qual seu nome?"), messagesID: 1, loginID: 2};
+
+//login(user);

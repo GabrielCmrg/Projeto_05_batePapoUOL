@@ -23,7 +23,7 @@
     <!-- header -->
     <div class="header hud">
         <img src="/logo 2.png" width="75" height="53" alt="UOL Logo"/>
-        <ion-icon name="people"></ion-icon>
+        <ion-icon name="people" onclick="showHideSideMenu()"></ion-icon>
     </div>
 
     <!-- message box -->
@@ -34,6 +34,43 @@
     <div class="input-msg hud">
         <input type="text" placeholder="Escreva aqui...">
         <ion-icon name="paper-plane-outline" onclick="sendMessage()"></ion-icon>
+    </div>
+
+    <!-- side menu -->
+    <div class="overlay hidden">
+        <div class="side" onclick="showHideSideMenu()"></div>
+        <div class="menu">
+            <h3>Escolha um contato<br>para enviar mensagem:</h3>
+            <ul class="contacts">
+                <li>
+                    <div class="name">
+                        <ion-icon name="people"></ion-icon>Todos
+                    </div>
+                    <ion-icon name="checkmark-outline" class="checkmark hidden"></ion-icon></ion-icon>
+                </li>
+                <li>
+                    <div class="name">
+                        <ion-icon name="person-circle"></ion-icon>Augustinho
+                    </div>
+                    <ion-icon name="checkmark-outline" class="checkmark hidden"></ion-icon></ion-icon>
+                </li>
+            </ul>
+            <h3>Escolha a visibilidade:</h3>
+            <ul class="visibilities">
+                <li>
+                    <div class="type">
+                        <ion-icon name="lock-open"></ion-icon>Público
+                    </div>
+                    <ion-icon name="checkmark-outline" class="checkmark hidden"></ion-icon></ion-icon>
+                </li>
+                <li>
+                    <div class="type">
+                        <ion-icon name="lock-closed"></ion-icon>Reservadamente
+                    </div>
+                    <ion-icon name="checkmark-outline" class="checkmark hidden"></ion-icon></ion-icon>
+                </li>
+            </ul>
+        </div>
     </div>
 
     <!-- Ion icons -->
